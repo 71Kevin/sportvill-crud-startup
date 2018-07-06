@@ -1,2 +1,3 @@
-# Sportvill-Startup
-Startup realizada no meu curso de Sistemas, onde utilizei Java como linguagem e PostGreSQL como Banco de Dados
+# Startup Sportvill
+
+![sportvill-imagem](https://user-images.githubusercontent.com/37316637/41267495-1543d1b0-6dd2-11e8-86ac-f3efeb562cb1.jpg)
