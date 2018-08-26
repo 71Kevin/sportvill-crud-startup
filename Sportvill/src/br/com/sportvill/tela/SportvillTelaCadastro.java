@@ -5,20 +5,16 @@
  */
 package br.com.sportvill.tela;
 
-
 import br.com.sportvill.dominio.Cadastro;
 import br.com.sportvill.repositorio.DataBase;
 import br.com.sportvill.business.CadastroBusiness;
-
-
 
 /**
  *
  * @author kevin
  */
 public class SportvillTelaCadastro extends javax.swing.JFrame {
-
-    
+  
     Cadastro cad = new Cadastro();
     CadastroBusiness control = new CadastroBusiness();
     DataBase conectarBD = new DataBase();
@@ -30,8 +26,7 @@ public class SportvillTelaCadastro extends javax.swing.JFrame {
         initComponents();
         
         //Ao fazer isso, estará chamando todas as instruções da conexaoBDtest
-        conectarBD.conexao();
-        
+        conectarBD.conexao();    
     }
 
     /**

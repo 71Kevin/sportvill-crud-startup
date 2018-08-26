@@ -5,24 +5,20 @@
  */
 package br.com.sportvill.business;
 
-
-import br.com.sportvill.business.interfaces.CadastroInterface;
 import br.com.sportvill.repositorio.DataBase;
 import br.com.sportvill.dominio.Cadastro;
 import java.sql.*;
 import javax.swing.JOptionPane;
 
-
 /**
  *
  * @author kevin
  */
-public class CadastroBusiness implements CadastroInterface {
+public class CadastroBusiness {
     
     DataBase conex = new DataBase();
     Cadastro cad = new Cadastro();
     
-    @Override
     public void Salvar(Cadastro cad) {
         
         conex.conexao();
@@ -31,16 +27,14 @@ public class CadastroBusiness implements CadastroInterface {
             pst.setString(1, cad.getNome());
             pst.setString(2, cad.getSenha());
             pst.execute();
-            //JOptionPane.showMessageDialog(null, "Dados inseridos com sucesso!");
+            JOptionPane.showMessageDialog(null, "Dados inseridos com sucesso!");
             
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, "Erro ao inserir dados\nErro:"+ex);
         }
            conex.desconectar();
     }
-    
-    
-    @Override
+      
     public Cadastro buscarUsuario(Cadastro cad){
         
         
@@ -54,15 +48,9 @@ public class CadastroBusiness implements CadastroInterface {
             cad.setNome(conex.rs.getString("nome_usuario"));
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, "Erro ao buscar usuario:"+ex);
-        }
-       
-       
-       
+        }      
+        
        conex.desconectar();
-        return cad;
-        
-        
-    }    
-    
-    
+        return cad;      
+    }       
 }

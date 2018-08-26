@@ -4,12 +4,10 @@
  * and open the template in the editor.
  */
 package br.com.sportvill.tela;
+
 import java.sql.*;
 import br.com.sportvill.repositorio.DataBase;
-
 import javax.swing.JOptionPane;
-
-
 
 /**
  *
@@ -22,13 +20,11 @@ public class SportvillTelaLogin extends javax.swing.JFrame {
      */
     
   DataBase con = new DataBase();
-    
-    
+        
     public SportvillTelaLogin() {
         initComponents();
         con.conexao();
-      
-        
+             
     }
 
     /**
@@ -100,8 +96,7 @@ public class SportvillTelaLogin extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void BotaoEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoEntrarActionPerformed
-    
-       
+          
       try {
           
           //Se ele encontrou o usuário no banco de dados, ele vai cair para o If
@@ -109,6 +104,7 @@ public class SportvillTelaLogin extends javax.swing.JFrame {
           //Vai pegar o primeiro resultado e salvar no rs
           con.rs.first(); 
              //Está comparando com o que o usuário digitou
+             
           if (con.rs.getString("senha_usuario").equals(CampoSenha.getText())) {
               SportvillTelaPrincipal tela = new SportvillTelaPrincipal();
               tela.setVisible(true);

@@ -20,14 +20,14 @@ public class DataBase {
     public ResultSet rs;
     //ResultSet, ele vai armazenar o resultado da pesquisa (na qual eu busquei)
         
-    private String driver = "org.postgresql.Driver";
+    private String driver = "com.mysql.jdbc.Driver";
     //driver, ele vai identificar o serviço do banco de dados (padrão do postgre)
        
-    private String caminho = "jdbc:postgresql://localhost:5432/sportvill";
+    private String caminho = "jdbc:mysql://localhost:3306/sportvill";
     //caminho, ele vai dizer onde está o banco de dados 
     
-    private String usuario = "postgres";
-    private String senha = "kevin";
+    private String usuario = "root";
+    private String senha = "";
     
     public Connection con;
     //Connection, vai ser responsavel pela conexão com o banco de dados
@@ -47,8 +47,7 @@ public class DataBase {
             
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, "Erro ao se conectar com o banco de dados:\n"+ex.getMessage());
-        }    
-        
+        }            
     }
     
         public void executaSql(String sql){
@@ -59,19 +58,14 @@ public class DataBase {
 //"TYPE_SCROLL_INSENSITIVE" vai diferenciar maiusculo de minusculo
 //"CONCUR_READ_ONLY"vai permitir "settar" o primeiro registro do banco quanto tanto o ultimo
         } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, "Erro do executaSql:\n"+ex.getMessage());
-        }
-                    
-                    
-                    
-                    
-                    
+            //JOptionPane.showMessageDialog(null, "Erro do executaSql:\n"+ex.getMessage());
+        }                                                                             
         }
       
         public void desconectar() {
             
-            //con.close();
-                  
+            //con.close();   
+            
         try {
             con.close();
             //JOptionPane.showMessageDialog(null, "BD desconectado com sucesso!");

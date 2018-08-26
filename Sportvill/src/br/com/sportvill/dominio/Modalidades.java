@@ -5,7 +5,6 @@ import java.util.Objects;
 
 public class Modalidades {
     
-    
    private String corrida;
    private String ciclismo;
    private String ginastica;
