@@ -4,13 +4,6 @@
 
 __________________________________________________________________________________________________________________________________
 
-
-## ATUALIZAÇÃO 26/08/2018 - VERSÃO BETA 1.2
-
-• Mudança no banco de dados PostgreSQL para o MySQL
-
-• Otimização do código 
-
 ## Tela de Login
 
 ![login](https://user-images.githubusercontent.com/37316637/44624849-13950f80-a8d0-11e8-969c-399d787a0602.jpg)
